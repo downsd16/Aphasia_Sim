@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <title>Aphasia Corner: Simulating Writing Grammatical Impairments</title>
+  
+  <link rel="stylesheet" href="../static/css/reset-min.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+  <link rel="stylesheet" href="../static/css/main.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+
+  <!--[if lte IE 6]>
+    <script src="../static/js/ie-transparent-min.js"></script>
+      <script src="../static/js/ie-png-fix.js"></script>
+        <script>          
+          DD_belatedPNG.fix('#example, .example');
+        </script>
+    <link type="text/css" rel="stylesheet" href="../static/css/ie.css" media="screen" />
+  <![endif]-->
+  <!--[if IE 7]><link type="text/css" rel="stylesheet" href="../static/css/ie7.css" media="screen" /><![endif]-->
+
+  <script type="text/javascript" src="../static/js/jquery.js" charset="utf-8"></script>
+  <script type="text/javascript" src="../static/js/jquery.hoverIntent.minified.js" charset="utf-8"></script>
+  <script type="text/javascript" src="../static/js/application.js" charset="utf-8"></script>
+  
+</head>
+<body>
+
+  <div id="container">
+
+    <!--#set var="page" value="about-aphasia" -->   
+    <!--#include virtual="../header.html" -->   
+    <div id="content">
+      
+      <h1>Aphasia Simulations</h1>
+      
+      <div id="sim-nav">
+        <ul class="clearfix">
+<li><a href="../index.html">Introduction</a></li>
+          <li><a href="what-is-aphasia.html">What is Aphasia?</a></li>
+          <li><a href="listening-impairments.html">Listening</a></li>
+          <li><a href="reading-impairments.html">Reading</a></li>
+          <li><a class="selected" href="writing-impairments.html">Writing</a></li>
+          <li><a href="speaking-impairments.html">Speaking</a></li>                              
+          <li class="last" ><a href="share.html">Share</a></li>                              
+        </ul>
+      </div>
+      <div id="sim-sub-nav">
+        <ul class="clearfix">
+          <li><a href="writing-impairments.html">Overview</a></li>
+          <li><a href="writing-impairments-simulation-1.html">Simulation 1</a></li>
+          <li><a href="writing-impairments-simulation-2.html">Simulation 2</a></li>
+          <li class="selected"><a href="writing-impairments-simulation-3.html">Simulation 3</a></li>
+          <li><a href="writing-impairments-communication-tips.html">Communication Tips</a></li>
+        </ul>
+      </div>
+      
+      
+      <h2>Simulating Grammatical Impairments</h2>
+      
+      <div id="simulation">
+        <h3>Type a short, simple sentence that goes with the picture.</h3>
+        
+        <div id="task">
+	    <div id="task-image" style="width: 250px;"><img id="image" src="" width="250" height="237" /></div> 
+        </div>
+
+        <div id="answers">
+	    <div id="typed-text" class="clearfix">X</div>
+	    <div class="clearfix">
+	      <input id="sim-input-long" type="text" name="" value="" />
+	    </div>
+        </div>
+
+        
+        <div class="console-small">
+          <a href="#" class="console-button next"><span>Next Question</span></a>
+          <span id="sim-current-count">1</span> of <span id="sim-total-count">5</span>
+        </div>
+        
+        <div id="quick-desc">
+          <p>In these examples, the person with aphasia may know what is in the picture, but may have trouble producing all of the grammatical forms that would normally be in a complete sentence.</p>
+        </div>
+      </div>
+      
+    </div>
+  </div><!-- #container -->
+  <!--#include virtual="../footer.html" -->   
+    
+  <div style="display: none; visibility: hidden;"><div id="player"></div></div>
+<script type="text/javascript">
+  var CURRENT_QUESTION=1;
+
+  var questionsData = {"questions": [
+      {"image_url": "../static/assets/images/dog_chasing_cat.jpg"},
+      {"image_url": "../static/assets/images/girl_throwing_ball.jpg"},
+      {"image_url": "../static/assets/images/book_on_table.jpg"},
+      {"image_url": "../static/assets/images/boy_eating_apple.jpg"},
+      {"image_url": "../static/assets/images/cat_under_chair.jpg"}
+  ]};
+      
+  $(document).ready(function() {
+    writingSim3DocReady();
+    $('#quick-desc').show();
+  });
+
+</script>
+</body>
+</html>

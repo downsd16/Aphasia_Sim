@@ -1,0 +1,30 @@
+    <div id="header">
+      <div id="header-holder">
+        <div id="nav">
+          <ul>
+           <!--#if expr='"$page" = "home"' -->
+            <li class="selected"><a id="nav-home" href="<!--#echo var="BASE_URL" -->">Home</a></li>
+	<!--#else -->
+            <li><a id="nav-home" href="<!--#echo var="BASE_URL" -->">Home</a></li>
+	<!--#endif -->
+<!--            <li><a id="nav-service" href="#">Service</a></li> -->
+<!--            <li><a id="nav-resources" href="#">Resources</a></li> -->
+           <!--#if expr='"$page" = "about-aphasia"' -->
+            <li class="selected"><a id="nav-about" href="<!--#echo var="BASE_URL" -->aphasia-simulations">Aphasia Simulations</a></li>
+	<!--#else -->
+            <li><a id="nav-about" href="<!--#echo var="BASE_URL" -->aphasia-simulations">Aphasia Simulations</a></li>
+	<!--#endif -->
+            <li><a id="nav-blog" href="<!--#echo var="BASE_URL" -->blog">Blog</a></li>
+          </ul>
+        </div>
+        <a href="<!--#echo var="BASE_URL" -->"><img id="logo" src="<!--#echo var="BASE_URL" -->/static/graphics/logo.png" width="203" height="83" alt="Aphasia Corner" title="Aphasia Corner" /></a>
+      </div>
+    </div>
+    <div id="banner" class="banner-bgnd clearfix">
+      <div class="banner-calendar"></div>
+      <div class="banner-info">
+        <h3>Let's continue raising awareness of aphasia...</h3>
+        <p>View our <a href="<!--#echo var="BASE_URL" -->/aphasia-simulations/">online Aphasia Simulations</a> and help us raise awareness by <a href="<!--#echo var="BASE_URL" -->/aphasia-simulations/share.html">sharing simulations</a> with your friends.</p>
+      </div>
+    </div>
+

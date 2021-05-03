@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <title>Aphasia Corner: Simulating Writing Impairments Visual Confusions</title>
+  
+  <link rel="stylesheet" href="../static/css/reset-min.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+  <link rel="stylesheet" href="../static/css/main.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+
+  <!--[if lte IE 6]>
+    <script src="../static/js/ie-transparent-min.js"></script>
+      <script src="../static/js/ie-png-fix.js"></script>
+        <script>          
+          DD_belatedPNG.fix('#example, .example');
+        </script>
+    <link type="text/css" rel="stylesheet" href="../static/css/ie.css" media="screen" />
+  <![endif]-->
+  <!--[if IE 7]><link type="text/css" rel="stylesheet" href="../static/css/ie7.css" media="screen" /><![endif]-->
+
+  <script type="text/javascript" src="../static/js/jquery.js" charset="utf-8"></script>
+  <script type="text/javascript" src="../static/js/jquery.hoverIntent.minified.js" charset="utf-8"></script>
+  <script type="text/javascript" src="../static/js/application.js" charset="utf-8"></script>
+  
+</head>
+<body>
+
+  <div id="container">
+
+    <!--#set var="page" value="about-aphasia" -->   
+    <!--#include virtual="../header.html" -->   
+
+    <div id="content">
+      
+      <h1>Aphasia Simulations</h1>
+      
+      <div id="sim-nav">
+        <ul class="clearfix">
+<li><a href="../index.html">Introduction</a></li>
+          <li><a href="what-is-aphasia.html">What is Aphasia?</a></li>
+          <li><a href="listening-impairments.html">Listening</a></li>
+          <li><a href="reading-impairments.html">Reading</a></li>
+          <li><a class="selected" href="writing-impairments.html">Writing</a></li>
+          <li><a href="speaking-impairments.html">Speaking</a></li>                              
+          <li class="last" ><a href="share.html">Share</a></li>                              
+        </ul>
+      </div>
+      <div id="sim-sub-nav">
+        <ul class="clearfix">
+          <li><a href="writing-impairments.html">Overview</a></li>
+          <li><a href="writing-impairments-simulation-1.html">Simulation 1</a></li>
+          <li class="selected"><a href="writing-impairments-simulation-2.html">Simulation 2</a></li>
+          <li><a href="writing-impairments-simulation-3.html">Simulation 3</a></li>
+          <li><a href="writing-impairments-communication-tips.html">Communication Tips</a></li>
+        </ul>
+      </div>
+      
+      
+      <h2>Simulating Visual Confusions</h2>
+      
+      <div id="simulation">
+        <h3>Write the name of the object you see on the picture.</h3>
+        
+        <div id="task">
+	    <div id="task-image"><img id="image" src="" width="165" height="130" /></div>
+        </div>
+
+        <div id="answers">
+	    <div class="clearfix">
+	      <input id="sim-input" type="text" name="" value="" />
+	    </div>
+        </div>
+
+        
+        <div class="console-small">
+          <a href="#" class="console-button next"><span>Next Question</span></a>
+          <span id="sim-current-count">1</span> of <span id="sim-total-count">5</span>
+        </div>
+        
+        <div id="quick-desc">
+          <p>To simulate writing impairment, a word that looks similar to the typed word is displayed.</p>
+        </div>
+      </div>
+    </div>
+  </div><!-- #container -->
+  <!--#include virtual="../footer.html" -->   
+    
+  <div style="display: none; visibility: hidden;"><div id="player"></div></div>
+<script type="text/javascript">
+  var CURRENT_QUESTION=1;
+
+  var questionsData = {"questions": [
+      {"image_url": "../static/assets/images/horse.jpg", "correct_word": "horse", "confused_word": "house"},
+      {"image_url": "../static/assets/images/glasses.jpg", "correct_word": "glasses", "confused_word": "jellies"},
+      {"image_url": "../static/assets/images/brush.jpg", "correct_word": "brush", "confused_word": "brisk"},
+      {"image_url": "../static/assets/images/milk.jpg", "correct_word": "milk", "confused_word": "melk"},
+      {"image_url": "../static/assets/images/chair.jpg", "correct_word": "chair", "confused_word": "creah"}
+  ]};
+      
+  var NEXT_URL = 'writing-impairments-simulation-3.html';
+  $(document).ready(function() {
+    writingSim1DocReady();
+  });
+
+</script>
+</body>
+</html>

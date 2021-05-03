@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <title>Aphasia Corner: Listening Impairments - Simulating Phonological and Semantic Errors</title>
+ 
+  <link rel="stylesheet" href="../static/css/reset-min.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+  <link rel="stylesheet" href="../static/css/main.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+
+  <!--[if lte IE 6]>
+    <script src="../static/js/ie-transparent-min.js"></script>
+      <script src="../static/js/ie-png-fix.js"></script>
+        <script>          
+          DD_belatedPNG.fix('#example, .example');
+        </script>
+    <link type="text/css" rel="stylesheet" href="../static/css/ie.css" media="screen" />
+  <![endif]-->
+  <!--[if IE 7]><link type="text/css" rel="stylesheet" href="../static/css/ie7.css" media="screen" /><![endif]-->
+
+  <script type="text/javascript" src="../static/js/jquery.js" charset="utf-8"></script>
+  <script type="text/javascript" src="../static/js/jwplayer/jwplayer.js" charset="utf-8"></script>
+  <script type="text/javascript" src="../static/js/jquery.hoverIntent.minified.js" charset="utf-8"></script>
+  <script type="text/javascript" src="../static/js/application.js" charset="utf-8"></script>
+  
+</head>
+<body>
+
+  <div id="container">
+
+    <!--#set var="page" value="about-aphasia" -->   
+    <!--#include virtual="../header.html" -->   
+
+    <div id="content">
+      
+      <h1>Aphasia Simulations</h1>
+      
+      <div id="sim-nav">
+        <ul class="clearfix">
+<li><a href="../index.html">Introduction</a></li>
+          <li><a href="what-is-aphasia.html">What is Aphasia?</a></li>
+          <li><a class="selected" href="listening-impairments.html">Listening</a></li>
+          <li><a href="reading-impairments.html">Reading</a></li>
+          <li><a href="writing-impairments.html">Writing</a></li>
+          <li><a href="speaking-impairments.html">Speaking</a></li>                              
+          <li class="last" ><a href="share.html">Share</a></li>                              
+        </ul>
+      </div>
+      <div id="sim-sub-nav">
+        <ul class="clearfix">
+          <li><a href="listening-impairments.html">Overview</a></li>
+          <li  class="selected"><a href="listening-impairments-simulation-1.html">Simulation 1</a></li>
+          <li><a href="listening-impairments-simulation-2.html">Simulation 2</a></li>
+          <li><a href="listening-impairments-simulation-3.html">Simulation 3</a></li>
+          <li><a href="listening-impairments-communication-tips.html">Communication Tips</a></li>
+        </ul>
+      </div>
+      
+      
+      <h2>Simulating Phonological and Semantic Errors</h2>
+      
+      <div id="simulation">
+        <h3>Click play to hear the question and then choose the appropriate answer.</h3>
+        
+        <div id="task">
+          <a id="play-button" href="#">PLAY</a>
+        </div>
+
+        <div id="answers">
+          <ul class="images clearfix">
+            <li id="img1"><a href="#"><img src="" width="165" height="130"/></a><div class="confirmation"></div></li>
+            <li id="img2"><a href="#"><img src="" width="165" height="130"/></a><div class="confirmation"></div></li>
+          </ul>
+        </div>
+
+        
+        <div class="console-small">
+          <a href="#" class="console-button next"><span>Next Question</span></a>
+          <span id="sim-current-count">1</span> of <span id="sim-total-count">6</span>
+        </div>
+        
+        <div id="quick-desc">
+        </div>
+        
+      </div>
+      
+    </div>
+  </div><!-- #container -->
+<!-- <div style="display: none; visibility: hidden;" ><div id="player"></div></div> -->
+     <div id="player"></div>
+  <!--#include virtual="../footer.html" -->   
+
+    
+<script type="text/javascript">
+  var CURRENT_QUESTION=1;
+
+  jwplayer("player").setup( { flashplayer: "../static/js/jwplayer/player.swf",
+                                   width: 0, height: 0,
+                                   events: {
+                                     onComplete: function() {
+                                       $("#play-button").removeClass('pause');
+                                     }   
+                                    }
+      });
+
+  var questionsData = {"questions": [
+      {"audio_url": "../static/assets/audio/listening-sim-1-q1.mp3", "correct_image_url": "../static/assets/images/nose.jpg", "wrong_image_url": "../static/assets/images/hose.jpg", "description": "<p>Now, that was confusing wasn't it...Sometimes the person with aphasia may hear the sounds but may perceive them in the wrong order.</p><p>In this example, instead of NOSE, they may perceive what was said as SNOW.</p> <p>Click on Next Question below to try a few more examples.<p>"},
+      {"audio_url": "../static/assets/audio/listening-sim-1-q2.mp3", "correct_image_url": "../static/assets/images/book.jpg", "wrong_image_url": "../static/assets/images/hook.jpg", "description": "<p>Sometimes, the person with aphasia may hear the sounds but may perceive them in the wrong order.</p><p>In this example, instead of BOOK they may perceived what was said as KOOB</p>"},
+      {"audio_url": "../static/assets/audio/listening-sim-1-q3.mp3", "correct_image_url": "../static/assets/images/horse.jpg", "wrong_image_url": "../static/assets/images/cat.jpg", "description": "<p>Sometimes, the person with aphasia may think of a word related to the one that is said.</p> <p>For example, they may think they heard COW even though HORSE was said.</p>"},
+      {"audio_url": "../static/assets/audio/listening-sim-1-q4.mp3", "correct_image_url": "../static/assets/images/apple.jpg", "wrong_image_url": "../static/assets/images/banana.jpg", "description": "<p>Sometimes, the person with aphasia may think of a word related to the one that is said.</p><p>For example, they may think they heard ORANGE even though APPLE was said.</p>"},
+      {"audio_url": "../static/assets/audio/listening-sim-1-q5.mp3", "correct_image_url": "../static/assets/images/screwdriver.jpg", "wrong_image_url": "../static/assets/images/saw.jpg", "description": "<p>Sometimes, the person with aphasia may think of a word related to the one that is said.</p><p> For example, they may think they heard HAMMER even though SCREWDRIVER was said."}
+  ]};
+      
+  $(document).ready(function() {
+    listeningSim1DocReady();
+  });
+
+</script>
+</body>
+</html>

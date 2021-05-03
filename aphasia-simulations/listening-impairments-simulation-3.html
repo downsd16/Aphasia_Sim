@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <title>Aphasia Corner: Simulating Grammatical Listening Comprehension Impairments</title>
+  
+  <link rel="stylesheet" href="../static/css/reset-min.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+  <link rel="stylesheet" href="../static/css/main.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+
+  <!--[if lte IE 6]>
+    <script src="../static/js/ie-transparent-min.js"></script>
+      <script src="../static/js/ie-png-fix.js"></script>
+        <script>          
+          DD_belatedPNG.fix('#example, .example');
+        </script>
+    <link type="text/css" rel="stylesheet" href="../static/css/ie.css" media="screen" />
+  <![endif]-->
+  <!--[if IE 7]><link type="text/css" rel="stylesheet" href="../static/css/ie7.css" media="screen" /><![endif]-->
+
+  <script type="text/javascript" src="../static/js/jquery.js" charset="utf-8"></script>
+  <script type="text/javascript" src="../static/js/jwplayer/jwplayer.js" charset="utf-8"></script>
+  <script type="text/javascript" src="../static/js/jquery.hoverIntent.minified.js" charset="utf-8"></script>
+  <script type="text/javascript" src="../static/js/application.js" charset="utf-8"></script>
+  
+</head>
+<body>
+
+  <div id="container">
+
+    <!--#set var="page" value="about-aphasia" -->   
+    <!--#include virtual="../header.html" -->   
+    <div id="content">
+      
+      <h1>Aphasia Simulations</h1>
+      
+      <div id="sim-nav">
+        <ul class="clearfix">
+<li><a href="../index.html">Introduction</a></li>
+          <li><a href="what-is-aphasia.html">What is Aphasia?</a></li>
+          <li><a class="selected" href="listening-impairments.html">Listening</a></li>
+          <li><a href="reading-impairments.html">Reading</a></li>
+          <li><a href="writing-impairments.html">Writing</a></li>
+          <li><a href="speaking-impairments.html">Speaking</a></li>                              
+          <li class="last" ><a href="share.html">Share</a></li>                              
+        </ul>
+      </div>
+      <div id="sim-sub-nav">
+        <ul class="clearfix">
+          <li><a href="listening-impairments.html">Overview</a></li>
+          <li><a href="listening-impairments-simulation-1.html">Simulation 1</a></li>
+          <li><a href="listening-impairments-simulation-2.html">Simulation 2</a></li>
+          <li class="selected"><a href="listening-impairments-simulation-3.html">Simulation 3</a></li>
+          <li><a href="listening-impairments-communication-tips.html">Communication Tips</a></li>
+        </ul>
+      </div>
+      
+      <h2>Simulating Grammatical Listening Comprehension Impairments</h2>
+      
+      <div id="simulation">
+        <h3>Listen to the paragraph, and then answer the questions by clicking on the answer. Questions will be revealed after you listened to the audio.</h3>
+        
+        <div id="task">
+          <a id="play-button" href="#">PLAY</a>
+        </div>
+
+        <div id="answers">
+          <h4>The Great Salt Lake is located in:</h4>
+          <ul class="new-answers">
+            <li><a class="sim-answer wrong-answer" href="#"><span class="order">a</span>Colorado</a></li>
+            <li><a class="sim-answer wrong-answer" href="#"><span class="order">b</span>California</a></li>
+            <li><a class="sim-answer correct-answer" href="#"><span class="order">c</span>Utah</a></li>
+            <li><a class="sim-answer wrong-answer" href="#"><span class="order">d</span>New Mexico</a></li>
+          </ul>
+
+          <h4>The desert receives less than 8 inches of rain each year:</h4>
+          <ul class="new-answers">
+            <li><a class="sim-answer correct-answer" href="#"><span class="order">a</span>true</a></li>
+            <li><a class="sim-answer wrong-answer" href="#"><span class="order">b</span>false</a></li>
+          </ul>
+
+          <h4>Only one explorer dared to travel through the Great Salt Lake desert in the 19th century:</h4>
+          <ul class="new-answers">
+            <li><a class="sim-answer wrong-answer" href="#"><span class="order">a</span>true</a></li>
+            <li><a class="sim-answer correct-answer" href="#"><span class="order">b</span>false</a></li>
+          </ul>
+
+          <h4>A railway was completed in 1910 that went:</h4>
+          <ul class="new-answers">
+            <li><a class="sim-answer wrong-answer" href="#"><span class="order">a</span>all the way around the desert</a></li>
+            <li><a class="sim-answer correct-answer" href="#"><span class="order">b</span>across the salt flats</a></li>
+            <li><a class="sim-answer wrong-answer" href="#"><span class="order">c</span>south of the desert</a></li>
+            <li><a class="sim-answer wrong-answer" href="#"><span class="order">d</span>north of the desert</a></li>
+          </ul>
+
+        </div>
+
+        
+        <div class="console-small">
+          <a href="listening-impairments-communication-tips.html" class="console-button next"><span>Communication Tips</span></a>
+        </div>
+        
+        <div id="quick-desc">
+          <p>In this example, small grammatical forms such as prepositions, articles, and some verb forms have been omitted or distorted to simulate how people with a loss of grammatical ability might understand a paragraph.</p>
+        </div>
+      </div>
+    </div>
+  </div><!-- #container -->
+  <!--#include virtual="../footer.html" -->   
+
+    
+  <div style="display: none; visibility: hidden;"><div id="player"></div></div>
+<script type="text/javascript">
+  jwplayer("player").setup( { flashplayer: "../static/js/jwplayer/player.swf",
+                              file: "../static/assets/audio/listening-sim-3.mp3",
+                              width: 0, height: 0,
+                              events: {
+                                onComplete: function() {
+                                  $("#play-button").removeClass('pause');
+                                  $('#answers').fadeIn();
+                                  $('#quick-desc').fadeIn();
+                                  $('.console-small').css('padding-top', '1em');
+                                }   
+                              }
+      });
+
+      
+  $('#answers').hide();
+  $('.console-small').css('padding-top', '14em');
+  $(document).ready(function() {
+    listeningSim2DocReady();
+  });
+
+</script>
+</body>
+</html>

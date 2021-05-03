@@ -1,0 +1,11 @@
+/* styles for Internet Explorer 6 and lower, unvisible for others */
+
+.clearfix {
+	height:1%;
+}
+
+input,
+textarea,
+select {
+	font-size: 100%;
+}

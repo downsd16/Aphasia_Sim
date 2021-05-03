@@ -1,0 +1,9 @@
+/* js.css contains styles that are visible only if JavaScript is enabled */
+
+.show {
+	display:block;
+}
+
+.not-now {
+	display:none;
+}

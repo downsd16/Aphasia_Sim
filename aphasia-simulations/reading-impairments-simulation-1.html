@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <title>Aphasia Corner: Simulating Reading Impairment Phonological and Semantic Errors</title>
+  
+  <link rel="stylesheet" href="../static/css/reset-min.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+  <link rel="stylesheet" href="../static/css/main.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+
+  <!--[if lte IE 6]>
+    <script src="../static/js/ie-transparent-min.js"></script>
+      <script src="../static/js/ie-png-fix.js"></script>
+        <script>          
+          DD_belatedPNG.fix('#example, .example');
+        </script>
+    <link type="text/css" rel="stylesheet" href="../static/css/ie.css" media="screen" />
+  <![endif]-->
+  <!--[if IE 7]><link type="text/css" rel="stylesheet" href="../static/css/ie7.css" media="screen" /><![endif]-->
+
+  <script type="text/javascript" src="../static/js/jquery.js" charset="utf-8"></script>
+  <script type="text/javascript" src="../static/js/jquery.hoverIntent.minified.js" charset="utf-8"></script>
+  <script type="text/javascript" src="../static/js/application.js" charset="utf-8"></script>
+  
+</head>
+<body>
+
+  <div id="container">
+
+    <!--#set var="page" value="about-aphasia" -->   
+    <!--#include virtual="../header.html" -->   
+
+    <div id="content">
+      
+      <h1>Aphasia Simulations</h1>
+      
+      <div id="sim-nav">
+        <ul class="clearfix">
+<li><a href="../index.html">Introduction</a></li>
+          <li><a href="what-is-aphasia.html">What is Aphasia?</a></li>
+          <li><a href="listening-impairments.html">Listening</a></li>
+          <li><a  class="selected" href="reading-impairments.html">Reading</a></li>
+          <li><a href="writing-impairments.html">Writing</a></li>
+          <li><a href="speaking-impairments.html">Speaking</a></li>                              
+          <li class="last" ><a href="share.html">Share</a></li>                              
+        </ul>
+      </div>
+      <div id="sim-sub-nav">
+        <ul class="clearfix">
+          <li><a href="reading-impairments.html">Overview</a></li>
+          <li  class="selected"><a href="reading-impairments-simulation-1.html">Simulation 1</a></li>
+          <li><a href="reading-impairments-simulation-2.html">Simulation 2</a></li>
+          <li><a href="reading-impairments-simulation-3.html">Simulation 3</a></li>
+          <li><a href="reading-impairments-communication-tips.html">Communication Tips</a></li>
+        </ul>
+      </div>
+      
+      
+      <h2>Simulating Phonological and Semantic Errors</h2>
+      
+      <div id="simulation">
+        <h3>Read the instruction and click on the picture that corresponds to the instruction.</h3>
+        
+        <div id="task">
+          <p class="question">Click on... ne$e.</p>
+        </div>
+        <div id="answers">
+          <ul class="images clearfix">
+            <li id="img1"><a href="#"><img src="" width="165" height="130"/></a><div class="confirmation"></div></li>
+            <li id="img2"><a href="#"><img src="" width="165" height="130"/></a><div class="confirmation"></div></li>
+          </ul>
+        </div>
+
+        
+        <div class="console-small">
+          <a href="#" class="console-button next"><span>Next Question</span></a>
+          <span id="sim-current-count">1</span> of <span id="sim-total-count">6</span>
+        </div>
+        
+        <div id="quick-desc">
+        </div>
+      </div>
+    </div>
+  </div><!-- #container -->
+  <!--#include virtual="../footer.html" -->   
+  <div style="display: none; visibility: hidden;"><div id="player"></div></div>
+<script type="text/javascript">
+  var CURRENT_QUESTION=1;
+
+  var questionsData = {"questions": [
+      {"text": "Click on... ne$e.", "correct_image_url": "../static/assets/images/nose.jpg", "wrong_image_url": "../static/assets/images/hose.jpg", "description": "<p>Now, that was confusing, wasn't it...The person with aphasia may perceive some parts of the word correctly, but not others.</p><p>In this example, instead of NOSE, they may perceive what was written as NE$E.</p><p>Click on Next Question below to try a few more example.</p>"},
+//      {"text": "Click on... routh.", "correct_image_url": "../static/assets/images/mouth.jpg", "wrong_image_url": "../static/assets/images/compass-s.jpg"},
+      {"text": "Click on... hammer.", "correct_image_url": "../static/assets/images/screwdriver.jpg", "wrong_image_url": "../static/assets/images/saw.jpg", "description": "<p>Sometimes, the person with aphasia may think of a word related to the one that is seen.</p><p>In this example, instead of SCREWDRIVER, they may perceive what was written as HAMMER.</p>"},
+      {"text": "Click on... ook.", "correct_image_url": "../static/assets/images/book.jpg", "wrong_image_url": "../static/assets/images/hook.jpg", "description": "<p>Sometimes, some important parts of words are perceived but other parts may not be.</p><p>In this example, instead of BOOK, they may perceive what was written as OOK.</p>"},
+      {"text": "Click on... cow", "correct_image_url": "../static/assets/images/horse.jpg", "wrong_image_url": "../static/assets/images/cat.jpg", "description": "<p>Sometimes, the person with aphasia may think of a word related to the one that is seen.</p><p>In this example, instead of HORSE, they may preceive what was written as COW.</p>"},
+      {"text": "Click on... orange.", "correct_image_url": "../static/assets/images/apple.jpg", "wrong_image_url": "../static/assets/images/banana.jpg", "description": "<p>Sometimes, some important parts of words are perceived but other parts may not be.</p><p>In this example, instead of APPLE, they may perceive what was written as ORANGE.</p>"}
+  ]};
+      
+  $(document).ready(function() {
+    readingSim1DocReady();
+  });
+
+</script>
+</body>
+</html>
