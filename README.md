@@ -1,4 +1,4 @@
-# downsd16.github.io
+# Aphasia_Sim
 
 Aphasia Simulator
 Voices of Hope for Aphasia
